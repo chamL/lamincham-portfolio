@@ -8,7 +8,7 @@ type Props = {
 
 function LearningText() {
   return (
-    <div className=" max-w-2xl mx-auto text-center space-y-8">
+    <div className=" max-w-2xl mx-auto text-center space-y-11">
       <h2 className="text-2xl font-bold text-blue-400">Education Journey</h2>
 
       <p className="text-white/80 text-sm md:text-base">

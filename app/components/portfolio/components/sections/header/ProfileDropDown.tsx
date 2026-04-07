@@ -18,7 +18,7 @@ function ProfileDropDown() {
                         className="
         fixed inset-0
         bg-black/20 backdrop-blur-[2px]
-        z-[19]
+        z-20
         transition-opacity duration-300
     "
                     />,
