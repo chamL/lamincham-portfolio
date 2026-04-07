@@ -3,45 +3,40 @@ import { FaGithub, FaLinkedin, FaRegFileAlt } from "react-icons/fa";
 import { IconButton } from "./IconButton";
 
 function SosialsButtons() {
-  return (
-    <div className="flex justify-center gap-4 mt-2">
-      <IconButton
-        icon={<FaGithub size={20} />}
-        href="https://github.com/ChamL"
-        color="hover:text-white"
-        label="GitHub"
-      />
+    return (
+        <div className="flex justify-center gap-4 mt-4 flex-wrap">
+            <IconButton
+                icon={<FaGithub size={22} />}
+                href="https://github.com/ChamL"
+                label="GitHub"
+            />
 
-      <IconButton
-        icon={<FaLinkedin size={20} />}
-        href="https://www.linkedin.com/in/lamin-cham-8986a132a/"
-        color="hover:text-blue-400"
-        label="LinkedIn"
-      />
+            <IconButton
+                icon={<FaLinkedin size={22} />}
+                href="https://www.linkedin.com/in/lamin-cham-8986a132a/"
+                label="LinkedIn"
+            />
 
-      <IconButton
-        icon={<Mail size={20} />}
-        href="mailto:..."
-        color="hover:text-yellow-400"
-        label="Email"
-      />
+            <IconButton
+                icon={<Mail size={22} />}
+                href="mailto:..."
+                label="Email"
+            />
 
-      <IconButton
-        icon={<Phone size={20} />}
-        href="tel:..."
-        color="hover:text-green-400"
-        label="+47 45 485 535"
-      />
+            <IconButton
+                icon={<Phone size={22} />}
+                href="tel:..."
+                label="Call"
+            />
 
-      <IconButton
-        icon={<FaRegFileAlt size={20} />}
-        href="/cv/Lamin_CV.pdf"
-        color="hover:text-purple-400"
-        download
-        label="Download CV"
-      />
-    </div>
-  );
+            <IconButton
+                icon={<FaRegFileAlt size={22} />}
+                href="/cv/Lamin_CV.pdf"
+                download
+                label="CV"
+            />
+        </div>
+    );
 }
 
 export default SosialsButtons;
