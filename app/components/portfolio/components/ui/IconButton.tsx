@@ -6,27 +6,26 @@ type Props = {
   label: string;
 };
 
-export function IconButton({ icon, href, color = "", download, label }: Props) {
+export function IconButton({ icon, href, download, label }: Props) {
   return (
     <a
       href={href}
       download={download}
       target={download ? undefined : "_blank"}
       rel="noopener noreferrer"
-      className={`
+      className="
         flex flex-col items-center justify-center
-        w-14 h-14 md:w-12 md:h-12
+        w-16 h-16
         rounded-xl
         bg-black/30 text-white
-        transition-all duration-200
         active:scale-90
-        ${color}
-      `}
+        transition
+        touch-manipulation
+      "
     >
       {icon}
 
-      {/* TEXT under icon (mobile friendly) */}
-      <span className="text-[10px] mt-1 opacity-70 md:hidden">
+      <span className="text-[10px] mt-1 opacity-70">
         {label}
       </span>
     </a>
