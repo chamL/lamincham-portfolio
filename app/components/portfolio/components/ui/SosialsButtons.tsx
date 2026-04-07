@@ -4,36 +4,41 @@ import { IconButton } from "./IconButton";
 
 function SosialsButtons() {
     return (
-        <div className="flex justify-center gap-4 mt-4 flex-wrap">
+        <div className="flex justify-center gap-4 mt-2">
             <IconButton
-                icon={<FaGithub size={22} />}
+                icon={<FaGithub size={20} />}
                 href="https://github.com/ChamL"
+                color="hover:text-white"
                 label="GitHub"
             />
 
             <IconButton
-                icon={<FaLinkedin size={22} />}
+                icon={<FaLinkedin size={20} />}
                 href="https://www.linkedin.com/in/lamin-cham-8986a132a/"
+                color="hover:text-blue-400"
                 label="LinkedIn"
             />
 
             <IconButton
-                icon={<Mail size={22} />}
+                icon={<Mail size={20} />}
                 href="mailto:..."
+                color="hover:text-yellow-400"
                 label="Email"
             />
 
             <IconButton
-                icon={<Phone size={22} />}
+                icon={<Phone size={20} />}
                 href="tel:..."
-                label="Call"
+                color="hover:text-green-400"
+                label="+47 45 485 535"
             />
 
             <IconButton
-                icon={<FaRegFileAlt size={22} />}
+                icon={<FaRegFileAlt size={20} />}
                 href="/cv/Lamin_CV.pdf"
+                color="hover:text-purple-400"
                 download
-                label="CV"
+                label="Download CV"
             />
         </div>
     );
