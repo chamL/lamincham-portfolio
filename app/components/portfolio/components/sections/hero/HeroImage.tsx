@@ -15,11 +15,19 @@ function HeroImage() {
             {/* BUTTON */}
             <button
                 onClick={() => setFlipped(!flipped)}
-                className={`absolute -left-8 bottom-0 -translate-y-1/2 z-20 bg-red-500 p-2 rounded-md shadow-md 
-                            transition-all duration-500 ease-in-out hover:scale-110 ${flipped ? "rotate-180" : ""
-                    }`}
+                className={`
+    absolute left-2 bottom-2
+    z-30
+    bg-red-500
+    w-12 h-12
+    flex items-center justify-center
+    rounded-full
+    shadow-lg
+    active:scale-90
+    transition
+  `}
             >
-                {flipped ? <RotateCw size={22} /> : <RotateCw size={22} />}
+                <RotateCw size={20} />
             </button>
 
             {/* FLIP CARD */}
