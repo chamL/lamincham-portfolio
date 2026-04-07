@@ -1,16 +1,16 @@
 "use client";
 
 type Props = {
-  open: boolean;
-  onClick: () => void;
-  children: React.ReactNode;
+    open: boolean;
+    onClick: () => void;
+    children: React.ReactNode;
 };
 
 function ProfileButton({ open, onClick, children }: Props) {
-  return (
-    <button
-      onClick={onClick}
-      className="
+    return (
+        <button
+            onClick={onClick}
+            className="
                 px-6 py-3 ml-4 
 
                 bg-black/20
@@ -28,11 +28,12 @@ function ProfileButton({ open, onClick, children }: Props) {
                 transition-all duration-300
 
                 relative z-20
+                pointer-events-auto
             "
-    >
-      {children}
-    </button>
-  );
+        >
+            {children}
+        </button>
+    );
 }
 
 export default ProfileButton;

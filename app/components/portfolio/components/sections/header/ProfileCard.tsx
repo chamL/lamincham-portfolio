@@ -24,7 +24,7 @@ function ProfileCard({ open }: Props) {
         
         ${open
           ? "translate-y-0 opacity-100"
-          : "-translate-y-[90%] opacity-0 pointer-events-none"
+          : "-translate-y-[90%] opacity-0 "
         }
     `}
     >
@@ -33,8 +33,7 @@ function ProfileCard({ open }: Props) {
         className="
             absolute inset-0
             bg-black/50 rounded-br-xl
-            z-0
-            pointer-events-none
+            
         "
       />
 

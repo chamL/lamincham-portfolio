@@ -12,57 +12,43 @@ function HeroImage() {
 
     return (
         <div className="relative w-full max-w-xs aspect-[2/3] perspective">
+            {/* BUTTON */}
+            <button
+                onClick={() => setFlipped(!flipped)}
+                className={`absolute -left-7 bottom-0 -translate-y-1/2 z-20 bg-red-500 p-2 rounded-md shadow-md 
+                            transition-all duration-500 ease-in-out hover:scale-110 ${flipped ? "rotate-180" : ""
+                    }`}
+            >
+                {flipped ? <RotateCw size={22} /> : <RotateCw size={22} />}
+            </button>
 
             {/* FLIP CARD */}
             <div
-                className={`
-          relative w-full h-full 
-          transition-transform duration-700
-          transform-style preserve-3d
-          ${flipped ? "rotate-y-180" : ""}
-        `}
+                className={`relative w-full h-full transition-transform duration-700 transform-style preserve-3d ${flipped ? "rotate-y-180" : ""
+                    }`}
             >
                 {/* FRONT */}
-                <div className="absolute inset-0 backface-hidden pointer-events-none">
+                <div className="absolute inset-0 backface-hidden">
                     <Image
                         src={potrait}
                         alt="portrait front"
-                        sizes="(max-width: 768px) 100vw, 300px"
+                        sizes="100vw"
                         fill
-                        className="object-cover rounded-xl"
+                        className="object-cover rounded-lg"
                     />
                 </div>
 
                 {/* BACK */}
-                <div className="absolute inset-0 rotate-y-180 backface-hidden pointer-events-none">
+                <div className="absolute inset-0 rotate-y-180 backface-hidden">
                     <Image
                         src={imageTwo}
                         alt="portrait back"
-                        sizes="(max-width: 768px) 100vw, 300px"
+                        sizes="100vw"
                         fill
-                        className="object-cover rounded-xl"
+                        className="object-cover rounded-lg"
                     />
                 </div>
             </div>
-
-            {/* BUTTON */}
-            <button
-                onClick={() => setFlipped(!flipped)}
-                className={`
-          absolute right-3 bottom-3
-          z-50
-          bg-red-500
-          w-12 h-12
-          flex items-center justify-center
-          rounded-xl
-          shadow-lg
-          active:scale-90
-          transition-all duration-300
-          ${flipped ? "rotate-180" : ""}
-        `}
-            >
-                <RotateCw size={20} />
-            </button>
         </div>
     );
 }
