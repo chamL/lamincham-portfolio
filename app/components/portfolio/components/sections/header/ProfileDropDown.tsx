@@ -30,7 +30,7 @@ function ProfileDropDown() {
                 <DropdownWrapper open={open}>
                     <ProfileCard open={open} />
                     <ProfileButton open={open} onClick={() => setOpen(!open)}>
-                        About Me
+                        Card
                     </ProfileButton>
                 </DropdownWrapper>
             </div>
