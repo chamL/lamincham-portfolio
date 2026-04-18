@@ -36,7 +36,7 @@ function SosialsButtons() {
 
             <IconButton
                 icon={<FaRegFileAlt size={20} />}
-                href="/cv/Lamin_CV.pdf"
+                href="/Lamin_CV.pdf"
                 color="hover:text-purple-400"
                 download
                 label="Download CV"
