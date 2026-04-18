@@ -19,7 +19,7 @@ function ProfileCard({ open }: Props) {
 
         border border-glass-border
         rounded-br-xl border-t-0 border-l-0
-        shadow-insetStrong
+        shadow-
 
         p-5 text-center    
 
@@ -43,12 +43,11 @@ function ProfileCard({ open }: Props) {
       <div className="relative space-y-4">
         {/* NAME */}
         <h3 className="
-  text-text font-bold text-xl
+  font-bold text-xl
   bg-gradient-to-r from-blue-400 to-purple-400
   bg-clip-text text-transparent font-permanent_marker
 
-  drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]
-  dark:drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]
+
 ">
           Lamin Cham
         </h3>
@@ -75,9 +74,6 @@ function ProfileCard({ open }: Props) {
         {/* TEXT */}
         <p className="
   text-text text-sm leading-relaxed 
-
-  drop-shadow-[0_1px_1px_rgba(0,0,0,0.15)]
-  dark:drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]
 ">
           Use the buttons below to find my LinkedIn, GitHub, and other
           platforms. You can also access my email, phone number, and download my

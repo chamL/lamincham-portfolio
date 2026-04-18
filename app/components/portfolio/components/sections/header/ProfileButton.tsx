@@ -13,7 +13,7 @@ function ProfileButton({ open, onClick, children }: Props) {
             className="
                 px-6 py-3 ml-4 
 
-                bg-black/10
+                bg-bg
                 backdrop-blur-xl
                 text-text
 
