@@ -12,7 +12,7 @@ function VideoModal({ video, onClose }: Props) {
     <div
       onClick={onClose}
       className="
-                fixed inset-0 z-[999]
+                fixed inset-0 z-50
                 flex items-center justify-center
 
                 bg-black/100 backdrop-blur-sm

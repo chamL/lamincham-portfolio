@@ -44,7 +44,7 @@ function CardSlider<T>({ items, renderItem }: Props<T>) {
     <div className="max-w-6xl mx-auto">
 
       {/* SLIDER */}
-      <div className="overflow-visible">
+      <div className="overflow-visible ">
         <div
           ref={containerRef}
           className={`
@@ -52,7 +52,6 @@ function CardSlider<T>({ items, renderItem }: Props<T>) {
             overflow-x-auto
             scroll-smooth p-5
             snap-x snap-mandatory
-
             transition-transform duration-150 ease-out
             ${nudge === "left" ? "-translate-x-2" : ""}
             ${nudge === "right" ? "translate-x-2" : ""}
