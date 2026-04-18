@@ -29,7 +29,7 @@ function Footer() {
             </h2>
 
             <p className="text-text-muted text-sm md:text-base max-w-xl mx-auto">
-              I’ve completed my studies in Bergen and I’m currently looking for
+              I’ve completed my studies and I’m currently looking for
               opportunities in frontend and UX/UI development.
             </p>
           </div>

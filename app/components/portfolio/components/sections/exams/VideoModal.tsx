@@ -15,8 +15,8 @@ function VideoModal({ video, onClose }: Props) {
                 fixed inset-0 z-[999]
                 flex items-center justify-center
 
-                bg-black/90 backdrop-blur-sm
-                p-6   // 🔥 GIR LUFT RUNDT
+                bg-bg backdrop-blur-sm
+                p-6   
             "
     >
       {/* CONTENT */}

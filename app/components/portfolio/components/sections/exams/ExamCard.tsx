@@ -44,7 +44,7 @@ function ExamCard({
 
     rounded-xl p-5
 
-    shadow-soft hover:shadow-hover
+    shadow-soft
     hover:-translate-y-1 hover:scale-[1.02]
 
     cursor-pointer

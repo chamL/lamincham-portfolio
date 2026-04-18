@@ -52,7 +52,7 @@ function StudySlider() {
               dark:from-blue-500/30 dark:to-purple-500/45
             
               border border-border
-              shadow-hover
+              shadow-xl
             `}
   
             ${position === "left" && `
