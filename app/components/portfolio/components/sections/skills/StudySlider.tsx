@@ -33,68 +33,74 @@ function StudySlider() {
               key={i}
               className={`
               absolute transition-all duration-500 ease-in-out
-  
+            
               w-[17.5rem] md:w-[20rem]
               h-[11.25rem]
-  
+            
               flex flex-col justify-start
-              p-6 rounded-xl text-center
-  
-              backdrop-blur-md
+              p-6 rounded-2xl text-center
+            
+              backdrop-blur-xl
               border border-border
-  
-
+            
+              bg-card dark:bg-card-muted
+            
               ${position === "center" && `
-              scale-110 z-20 opacity-100
+                scale-110 z-20 opacity-100
             
-              bg-gradient-to-br
-              from-blue-100/80 to-purple-100/80
-              dark:from-blue-500/30 dark:to-purple-500/45
+                bg-card
+                dark:bg-card-strong
             
-              border border-border
-              shadow-xl
-            `}
-  
-            ${position === "left" && `
-            -translate-x-[120%]
-            scale-90 z-10 opacity-70
-          
-            bg-gradient-to-br
-            from-blue-50/60 to-purple-50/60
-            dark:from-blue-500/20 dark:to-purple-500/20
-          `}
-          
-          ${position === "right" && `
-            translate-x-[120%]
-            scale-90 z-10 opacity-70
-          
-            bg-gradient-to-br
-            from-blue-50/60 to-purple-50/60
-            dark:from-blue-500/10 dark:to-purple-500/20
-          `}
-  
+                shadow-hover
+            
+                before:absolute before:inset-0
+                before:rounded-2xl
+                before:bg-gradient-to-br
+                before:from-blue-500/10 before:to-purple-500/10
+                dark:before:from-blue-500/20 dark:before:to-purple-500/20
+                before:pointer-events-none
+              `}
+            
+              ${position === "left" && `
+                -translate-x-[120%]
+                scale-90 z-10 opacity-60
+            
+                bg-card-muted
+                shadow-soft
+              `}
+            
+              ${position === "right" && `
+                translate-x-[120%]
+                scale-90 z-10 opacity-60
+            
+                bg-card-muted
+                shadow-soft
+              `}
+            
               ${position === "hidden" && "opacity-0 scale-75"}
             `}
             >
               <h3 className="text-text font-semibold mb-2 text-sm">
                 {item.semester}
               </h3>
+              <hr className="py-2 border-t border-border" />
 
               <div className="flex flex-wrap justify-center gap-2 text-xs">
                 {item.subjects.map((sub, idx) => (
                   <span
                     key={idx}
                     className="
-                    px-3 py-1
-  
-                    bg-white/60 dark:bg-white/10
+                    px-3 py-1 text-xs font-medium
+                  
+                    rounded-full
+                  
+                    bg-white/90 dark:bg-white/10
                     backdrop-blur-md
-  
-                    border border-black/5 dark:border-white/5
-                    rounded-md
-  
-                    text-gray-700 dark:text-black
-  
+                  
+                    border border-black/10 dark:border-white/10
+                  
+                    text-gray-800 text-text
+                  
                     shadow-sm
                   "
                   >
