@@ -14,7 +14,7 @@ function ProfileCard({ open }: Props) {
       className={`
     relative w-[20rem]
   
-    backdrop-blur-2xl
+    backdrop-blur-3xl
     bg-glass-bg
   
     border border-glass-border
@@ -35,7 +35,7 @@ function ProfileCard({ open }: Props) {
       {/* OVERLAY (BAK) */}
       <div
         className="
-            absolute
+            absolute top-0 bottom-0 left-0 right-0
             bg-black/10 rounded-br-xl
            backdrop-blur-3xl
             
