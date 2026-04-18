@@ -6,7 +6,7 @@ const config = {
   ],
   theme: {
     extend: {
-
+      darkMode: "class",
       colors: {
         // 🌗 THEME COLORS
         bg: "var(--bg)",

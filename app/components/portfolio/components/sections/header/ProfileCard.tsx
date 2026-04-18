@@ -15,12 +15,11 @@ function ProfileCard({ open }: Props) {
         relative w-[20rem]
 
         backdrop-blur-2xl
-        bg-white/70 dark:bg-white/5
+        bg-bg
 
         border border-glass-border
         rounded-br-xl border-t-0 border-l-0
-
-        shadow-glass
+        shadow-insetStrong
 
         p-5 text-center    
 
