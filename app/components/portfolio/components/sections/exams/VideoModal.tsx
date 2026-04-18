@@ -15,7 +15,7 @@ function VideoModal({ video, onClose }: Props) {
                 fixed inset-0 z-[999]
                 flex items-center justify-center
 
-                bg-bg backdrop-blur-sm
+                bg-black/100 backdrop-blur-sm
                 p-6   
             "
     >
@@ -51,14 +51,12 @@ function VideoModal({ video, onClose }: Props) {
           controls
           autoPlay
           className="
-                        w-full
-                        max-h-[80vh]
-
-                        rounded-xl
-                        shadow-[0_20px_60px_rgba(0,0,0,0.8)]
-
-                        border border-white/10
-                    "
+          w-full
+          max-h-[85vh]
+          object-contain
+          rounded-xl
+          shadow-[0_20px_60px_rgba(0,0,0,0.8)]
+        "
         />
       </div>
     </div>

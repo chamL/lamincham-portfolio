@@ -19,7 +19,7 @@ function ExperienceModal({ title, fullBio, images = [], onClose }: Props) {
 
                 flex items-center justify-center
 
-                bg-black/80 backdrop-blur-md
+                bg-black/40 backdrop-blur-md
                 p-4 md:p-8
 
                 animate-in fade-in duration-300

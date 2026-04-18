@@ -4,16 +4,23 @@ import ExamCard from "./ExamCard";
 import { exams } from "@/app/components/portfolio/data/examsData";
 import SectionWrapper from "../../ui/SectionWrapper";
 import CardSlider from "../../ui/CardSlider";
+import Banner from "../../ui/Banner";
 
 function Exams() {
   return (
     <SectionWrapper id="exams">
+      <Banner
+        text="Projects & Exams"
+        bg="bg-lime-800"
+        textColor="text-white"
+        shadow="inset"
+      />
       {/* HEADER */}
       <div className="text-center my-12">
         <h2
           className="
                     text-2xl md:text-3xl font-bold
-                    bg-gradient-to-r from-cyan-400 to-purple-500
+                    bg-gradient-to-r from-blue-500 to-lime-500
                     bg-clip-text text-transparent
                 "
         >
