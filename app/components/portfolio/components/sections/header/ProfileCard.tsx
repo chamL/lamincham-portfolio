@@ -12,23 +12,25 @@ function ProfileCard({ open }: Props) {
   return (
     <div
       className={`
-        relative w-[320px] 
-    
-        backdrop-blur-3xl
-        bg-card-bg 
-        bg-glass-bg
-
-    
-        border border-white/50 
-        rounded-br-xl border-t-0 border-l-0
-    
-        p-5 text-center    
-        
-        ${open
+    relative w-[20rem]
+  
+    backdrop-blur-2xl
+    bg-glass-bg
+  
+    border border-glass-border
+    rounded-br-xl border-t-0 border-l-0
+  
+    shadow-glass
+  
+    p-5 text-center    
+  
+    transition-all duration-300
+  
+    ${open
           ? "translate-y-0 opacity-100"
-          : "-translate-y-[90%] opacity-0 "
+          : "-translate-y-[90%] opacity-0"
         }
-    `}
+  `}
     >
       {/* OVERLAY (BAK) */}
       <div

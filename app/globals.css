@@ -73,6 +73,7 @@ html {
 
 }
 /* SCROLLBAR STYLE */
+/*
 ::-webkit-scrollbar {
   height: 6px;
 }
@@ -89,4 +90,4 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(42, 49, 59, 0.6);
 }
-
+*/
