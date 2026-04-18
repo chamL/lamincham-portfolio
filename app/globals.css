@@ -25,3 +25,50 @@ body {
 html {
   scroll-behavior: smooth;
 }
+/*       COLOUR MODES */
+:root {
+  /*  LIGHT MODE (DEFAULT) */
+  --bg: #f8fafc;           
+  --text: #0f172a;
+  --text-muted: #475569;
+  --white-soft: #f1f5f9; 
+
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-muted: rgba(0, 0, 0, 0.04);  
+  --card-strong: rgba(0, 0, 0, 0.08);
+  --card-border: rgba(0, 0, 0, 0.1);
+
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(0, 0, 0, 0.08);
+
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-strong: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* DARK MODE */
+.dark {
+  --bg: #3a3b3c;
+  --text: #ffffff;
+  --text-muted: #cbd5f5;
+  --white-soft: rgba(255,255,255,0.08);
+  --card: rgba(255,255,255,0.7);
+
+  
+
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-muted: rgba(255, 255, 255, 0.06);
+  --card-strong: rgba(255, 255, 255, 0.1);
+  --card-border: rgba(255, 255, 255, 0.2);
+  
+
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.15);
+
+    /* SHADOW DARK MODE */
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --shadow-strong: 0 10px 40px rgba(0, 0, 0, 0.6);
+
+    --shadow-hover: 0 15px 50px rgba(0,0,0,0.7);
+
+}

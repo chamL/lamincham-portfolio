@@ -15,9 +15,11 @@ function ProfileCard({ open }: Props) {
         relative w-[320px] 
     
         backdrop-blur-3xl
-        bg-white/40
+        bg-card-bg 
+        bg-glass-bg
+
     
-        border border-white/10 
+        border border-white/50 
         rounded-br-xl border-t-0 border-l-0
     
         p-5 text-center    
@@ -31,8 +33,9 @@ function ProfileCard({ open }: Props) {
       {/* OVERLAY (BAK) */}
       <div
         className="
-            absolute inset-0
-            bg-black/50 rounded-br-xl
+            absolute
+            bg-black/10 rounded-br-xl
+           backdrop-blur-3xl
             
         "
       />
@@ -42,9 +45,9 @@ function ProfileCard({ open }: Props) {
         {/* NAME */}
         <h3
           className="
-                text-white font-bold text-lg
+                text-text font-bold text-lg
                 bg-gradient-to-r from-blue-400 to-purple-400
-                bg-clip-text text-transparent
+                bg-clip-text 
             "
         >
           Lamin Cham
@@ -69,14 +72,14 @@ function ProfileCard({ open }: Props) {
         </div>
 
         {/* TEXT */}
-        <p className="text-white/90 text-sm leading-relaxed">
+        <p className="text-text text-sm leading-relaxed">
           Use the buttons below to find my LinkedIn, GitHub, and other
           platforms. You can also access my email, phone number, and download my
           CV.
         </p>
 
         {/* SOCIALS */}
-        <div className="pt-2 border-t border-white/10">
+        <div className="pt-2 border-t border-border">
           <SosialsButtons />
         </div>
       </div>

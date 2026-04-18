@@ -12,7 +12,7 @@ function HeroProfile({ }: HeroRightProps) {
                 {/* SMALL INTRO */}
                 <p
                     className="
-    text-white/60
+    text-text
     text-sm md:text-base
     tracking-wide
 "
@@ -45,7 +45,7 @@ function HeroProfile({ }: HeroRightProps) {
                 <p
                     className="
     text-lg md:text-xl
-    text-white/80
+    text-text
     font-semibold
     tracking-wide
 "
@@ -58,7 +58,7 @@ function HeroProfile({ }: HeroRightProps) {
             <HeroImage />
 
             {/* DESCRIPTION */}
-            <p className="text-white max-w-md text-sm md:text-base">
+            <p className="text-text max-w-md text-sm md:text-base">
                 I’m a developer who enjoys building modern and user-friendly
                 applications. I like combining design and code to create smooth,
                 interactive experiences. I’m especially interested in frontend and

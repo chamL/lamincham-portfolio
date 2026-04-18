@@ -20,28 +20,42 @@ function ExperienceCard({ title, dates, shortBio, fullBio, images }: Props) {
       <button
         onClick={() => setModalOpen(true)}
         className="
-                    group
-                    relative w-full text-left
+          group relative w-full text-left
 
-                    flex gap-4
+          flex gap-4
 
-                    bg-black/20 backdrop-blur-xl
-                    border border-white/10
-                    rounded-xl shadow-insetStrong
+          bg-card dark:bg-card-strong
+          backdrop-blur-xl
 
-                    p-5
+          rounded-xl p-5
 
-                    transition-all duration-300
-                    hover:bg-black/40
-                    hover:shadow-strong
-                "
+          shadow-soft
+          hover:shadow-hover
+          hover:-translate-y-1
+
+          transition-all duration-300
+
+          before:absolute before:inset-0
+          before:rounded-xl
+          before:bg-gradient-to-br
+          before:from-blue-200/40 before:to-purple-200/40
+          dark:before:from-sky-700 dark:before:to-teal-400
+          before:opacity-30 dark:before:opacity-50
+          before:pointer-events-none
+        "
       >
         {/* LEFT STRIPE */}
         <div
           className="
-                    w-1 rounded-full
-                    bg-gradient-to-b from-cyan-400 to-purple-500
-                "
+            w-1 rounded-full
+
+            bg-gradient-to-b
+            from-cyan-500 to-lime-500
+
+            opacity-80
+            group-hover:opacity-100
+            transition
+          "
         />
 
         {/* CONTENT */}
@@ -49,10 +63,10 @@ function ExperienceCard({ title, dates, shortBio, fullBio, images }: Props) {
           {/* DATE */}
           <span
             className="
-                        text-[11px]
-                        text-white/40
-                        uppercase tracking-widest
-                    "
+              text-xs
+              text-text-muted
+              uppercase tracking-wider
+            "
           >
             {dates}
           </span>
@@ -60,10 +74,13 @@ function ExperienceCard({ title, dates, shortBio, fullBio, images }: Props) {
           {/* TITLE */}
           <h3
             className="
-                        text-lg font-bold mt-1 text-white
-                        group-hover:text-cyan-400
-                        transition
-                    "
+              text-lg font-semibold mt-1 text-text
+
+              group-hover:text-cyan-600
+              dark:group-hover:text-cyan-500
+
+              transition
+            "
           >
             {title}
           </h3>
@@ -71,9 +88,9 @@ function ExperienceCard({ title, dates, shortBio, fullBio, images }: Props) {
           {/* TEXT */}
           <p
             className="
-                        mt-3 text-sm text-white/70 leading-relaxed
-                        max-w-md
-                    "
+              mt-3 text-sm text-text-muted leading-relaxed
+              max-w-md
+            "
           >
             {shortBio}
           </p>
@@ -81,21 +98,23 @@ function ExperienceCard({ title, dates, shortBio, fullBio, images }: Props) {
           {/* CTA */}
           <div
             className="
-                        mt-4 flex items-center gap-2
+              mt-4 flex items-center gap-2
 
-                        text-sm text-white/50
-                        group-hover:text-purple-400
+              text-sm text-text-muted
 
-                        transition
-                    "
+              group-hover:text-purple-600
+              dark:group-hover:text-emerald-600
+
+              transition
+            "
           >
             View details
             <ArrowUpRight
               size={16}
               className="
-                                transition-transform duration-300
-                                group-hover:translate-x-1 group-hover:-translate-y-1
-                            "
+                transition-transform duration-300
+                group-hover:translate-x-1 group-hover:-translate-y-1
+              "
             />
           </div>
         </div>

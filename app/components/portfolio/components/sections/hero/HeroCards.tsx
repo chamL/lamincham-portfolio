@@ -24,11 +24,10 @@ function HeroCards({ cards, activeCard }: HeroCardsProps) {
                         absolute inset-0
                         transition-all duration-500 ease-in-out
 
-                        ${
-                          activeCard === card.id
-                            ? "opacity-100 translate-x-0 scale-100 z-10"
-                            : "opacity-0 translate-x-8 scale-95 z-0 pointer-events-none"
-                        }
+                        ${activeCard === card.id
+              ? "opacity-100 translate-x-0 scale-100 z-10"
+              : "opacity-0 translate-x-8 scale-95 z-0 pointer-events-none"
+            }
                     `}
         >
           <div
@@ -52,7 +51,7 @@ function HeroCards({ cards, activeCard }: HeroCardsProps) {
                             text-center
                             py-3
                             font-bold
-                            text-white
+                            text-text
 
                             bg-black/20
                             shadow-md
@@ -67,7 +66,7 @@ function HeroCards({ cards, activeCard }: HeroCardsProps) {
               className="
     p-5
     text-center
-    text-white/80
+    text-text
     text-sm
     divide-y divide-white/10
 "

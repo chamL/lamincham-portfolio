@@ -7,16 +7,17 @@ import logo from "@/public/images/rasta.png";
 import { HeaderProps } from "../../../types/header";
 import NavMenu from "./NavMenu";
 import ProfileDropDown from "./ProfileDropDown";
+import ThemeToggle from "../../ui/ThemeToggle";
 
 function Header({ title }: HeaderProps) {
     return (
         <header
             className="
                 fixed top-0 left-0 right-0 z-50
-                w-full h-20
+                w-full h-20 
 
                 backdrop-blur-2xl
-                border-b border-white/30
+                border-b border-border 
 
                 shadow-strong
             "
@@ -44,6 +45,7 @@ function Header({ title }: HeaderProps) {
                             className="rounded-full shadow-md"
                         />
                     </Link>
+
                 </div>
 
                 {/* TITLE (CENTERED ABSOLUTE) */}
@@ -64,7 +66,8 @@ function Header({ title }: HeaderProps) {
                 </h1>
 
                 {/* RIGHT SIDE */}
-                <div className="flex items-center">
+                <div className="flex items-center gap-3">
+                    <ThemeToggle />
                     <NavMenu />
                 </div>
             </div>

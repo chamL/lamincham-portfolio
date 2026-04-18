@@ -33,35 +33,40 @@ function ExamCard({
       <div
         onClick={() => setOpen(true)}
         className={`
-                    h-full min-h-[280px]
-                    flex flex-col justify-between
+    relative  
+    h-full min-h-[18rem]
+    flex flex-col justify-between
 
-                    ${bg}
-                    backdrop-blur-xl
+    ${bg}
 
-                    border border-white/10
-                    rounded-xl p-5
+    bg-white/80 dark:bg-transparent
+    backdrop-blur-xl
 
-                    shadow-soft
-                    hover:shadow-xl
-                    hover:-translate-y-1
-                    hover:scale-[1.02]
-                    active:scale-[0.98]
+    rounded-xl p-5
 
-                    cursor-pointer
+    shadow-soft hover:shadow-hover
+    hover:-translate-y-1 hover:scale-[1.02]
 
-                    transition-all duration-300
-                `}
+    cursor-pointer
+    transition-all duration-300
+
+    before:absolute before:inset-0
+    before:rounded-xl
+    before:bg-gradient-to-br
+    before:from-teal-600 before:to-lime-600
+    before:opacity-30
+    before:pointer-events-none
+  `}
       >
         {/* CONTENT */}
         <div>
-          <span className="text-[11px] text-white/60 uppercase tracking-wider">
+          <span className="text-[0.6875rem] text-text uppercase tracking-wider">
             {type}
           </span>
 
-          <h3 className="text-lg font-bold text-white mt-2">{title}</h3>
+          <h3 className="text-lg font-bold text-text mt-2">{title}</h3>
 
-          <p className="mt-3 text-[13px] text-white/80 leading-relaxed">
+          <p className="mt-3 text-[0.8125rem] text-text leading-relaxed">
             {shortBio}
           </p>
 
@@ -70,12 +75,21 @@ function ExamCard({
               <span
                 key={i}
                 className="
-                                    text-[11px] px-2 py-1
-                                    bg-white/10
-                                    border border-white/10
-                                    rounded-full
-                                    text-blue-300
-                                "
+                text-xs px-3 py-1
+              
+                bg-white/60 dark:bg-white/10
+                backdrop-blur-md
+              
+                border border-black/5 dark:border-white/10
+                rounded-xl
+              
+                text-teal-700 dark:text-teal-200
+              
+                shadow-sm
+                hover:shadow-md
+              
+                transition
+              "
               >
                 {t}
               </span>
@@ -87,8 +101,9 @@ function ExamCard({
         <div
           className="
                         mt-6 flex items-center justify-between
-                        text-sm text-blue-400
-                        border-t border-white/10 pt-4
+                        text-sm 
+                        text-blue-700 dark:text-teal-500
+                        border-t border-border pt-4
                         opacity-80
                     "
         >

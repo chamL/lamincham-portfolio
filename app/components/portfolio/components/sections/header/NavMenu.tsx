@@ -20,19 +20,19 @@ function NavMenu() {
           className="
         px-4 py-2
         bg-glass-soft backdrop-blur-xl
-        text-white
+        text-text
 
         rounded-lg
-        border border-white/10
+        border border-border
         outline-none
 
-        shadow-md
+        shadow-soft
 
         data-[state=open]:shadow-insetSoft
         data-[state=open]:scale-95
 
         hover:bg-white/5
-        hover:shadow-xl
+        hover:shadow-insetSoft
 
         transition-all duration-300
     "
@@ -49,11 +49,11 @@ function NavMenu() {
           className="
                         w-48 p-5 pt-8
 
-                        bg-glass-soft backdrop-blur-xl
-                        border border-white/10
+                        bg-card-bg backdrop-blur-xl
+                        border border-border
                         rounded-xl
 
-                        shadow-[0_10px_40px_rgba(0,0,0,0.4)]
+                        shadow-soft
 
                         flex flex-col gap-3
 
@@ -66,11 +66,11 @@ function NavMenu() {
               <a
                 href={link.href}
                 className="
-                                    text-white/80 text-sm
+                                    text-text text-sm
                                     text-left
 
                                     hover:text-blue-400
-                                    hover:translate-x-[-4px]
+                                    hover:translate-x-[-0.25rem]
                                     outline-none
 
                                     transition-all duration-200

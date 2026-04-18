@@ -13,16 +13,15 @@ function ProfileButton({ open, onClick, children }: Props) {
             className="
                 px-6 py-3 ml-4 
 
-                bg-black/20
+                bg-black/10
                 backdrop-blur-xl
-                text-white
+                text-text
 
                 rounded-b-xl
-                border border-white/20 border-t-0 
+                border border-border border-t-0 
 
                 shadow-xl
 
-                hover:bg-white/5
                 hover:shadow-insetStrong
 
                 transition-all duration-300

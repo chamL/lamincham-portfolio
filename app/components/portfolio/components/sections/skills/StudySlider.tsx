@@ -17,7 +17,7 @@ function StudySlider() {
 
   return (
     <div className="mt-20 flex flex-col items-center w-full">
-      <div className="relative w-full max-w-5xl h-[300px] flex items-center justify-center overflow-hidden">
+      <div className="relative w-full max-w-5xl h-[18.75rem] flex items-center justify-center overflow-hidden">
         {study.map((item, i) => {
           const position =
             i === index
@@ -32,25 +32,71 @@ function StudySlider() {
             <div
               key={i}
               className={`
-                          absolute transition-all duration-500 ease-in-out
-                          w-[280px] md:w-[320px] h-[180px]
-                          flex flex-col justify-start
-                          p-6 rounded-xl text-center
-                          backdrop-blur-md border border-white/20
-                      
-                          ${position === "center" && "scale-110 z-20 bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-100"}
-                          ${position === "left" && "-translate-x-[120%] scale-90 z-10 opacity-60 bg-white/5"}
-                          ${position === "right" && "translate-x-[120%] scale-90 z-10 opacity-60 bg-white/5"}
-                          ${position === "hidden" && "opacity-0 scale-75"}
-                        `}
-            >
-              <h3 className="text-white font-bold mb-2">{item.semester}</h3>
+              absolute transition-all duration-500 ease-in-out
+  
+              w-[17.5rem] md:w-[20rem]
+              h-[11.25rem]
+  
+              flex flex-col justify-start
+              p-6 rounded-xl text-center
+  
+              backdrop-blur-md
+              border border-border
+  
 
-              <div className="flex flex-wrap justify-center gap-2 text-sm">
+              ${position === "center" && `
+              scale-110 z-20 opacity-100
+            
+              bg-gradient-to-br
+              from-blue-100/80 to-purple-100/80
+              dark:from-blue-500/30 dark:to-purple-500/45
+            
+              border border-border
+              shadow-hover
+            `}
+  
+            ${position === "left" && `
+            -translate-x-[120%]
+            scale-90 z-10 opacity-70
+          
+            bg-gradient-to-br
+            from-blue-50/60 to-purple-50/60
+            dark:from-blue-500/20 dark:to-purple-500/20
+          `}
+          
+          ${position === "right" && `
+            translate-x-[120%]
+            scale-90 z-10 opacity-70
+          
+            bg-gradient-to-br
+            from-blue-50/60 to-purple-50/60
+            dark:from-blue-500/10 dark:to-purple-500/20
+          `}
+  
+              ${position === "hidden" && "opacity-0 scale-75"}
+            `}
+            >
+              <h3 className="text-text font-semibold mb-2 text-sm">
+                {item.semester}
+              </h3>
+
+              <div className="flex flex-wrap justify-center gap-2 text-xs">
                 {item.subjects.map((sub, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 border-blue-400/30 rounded-full text-blue-200"
+                    className="
+                    px-3 py-1
+  
+                    bg-white/60 dark:bg-white/10
+                    backdrop-blur-md
+  
+                    border border-black/5 dark:border-white/5
+                    rounded-md
+  
+                    text-gray-700 dark:text-black
+  
+                    shadow-sm
+                  "
                   >
                     {sub}
                   </span>
@@ -63,16 +109,42 @@ function StudySlider() {
         {/* BUTTONS */}
         <button
           onClick={prev}
-          className="absolute left-4 bg-white/20 p-2 rounded-full hover:bg-white/30 z-30"
+          className="
+          absolute left-4
+  
+          bg-card-strong
+          backdrop-blur-md
+  
+          p-2 rounded-full
+          border border-border
+  
+          hover:scale-110
+          transition
+  
+          z-30
+        "
         >
-          <ChevronLeft />
+          <ChevronLeft className="text-text" />
         </button>
 
         <button
           onClick={next}
-          className="absolute right-4 bg-white/20 p-2 rounded-full hover:bg-white/30 z-30"
+          className="
+          absolute right-4
+  
+          bg-card-strong
+          backdrop-blur-md
+  
+          p-2 rounded-full
+          border border-border
+  
+          hover:scale-110
+          transition
+  
+          z-30
+        "
         >
-          <ChevronRight />
+          <ChevronRight className="text-text" />
         </button>
       </div>
 
@@ -82,9 +154,12 @@ function StudySlider() {
           <div
             key={i}
             className={`
-                            w-2 h-2 rounded-full transition
-                            ${i === index ? "bg-blue-400 scale-125" : "bg-white/30"}
-                        `}
+            w-2 h-2 rounded-full transition
+  
+            ${i === index
+                ? "bg-blue-500 dark:bg-blue-300 scale-125"
+                : "bg-black/20 dark:bg-black/40"}
+          `}
           />
         ))}
       </div>

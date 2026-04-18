@@ -21,7 +21,7 @@ function CardSlider<T>({ items, renderItem }: Props<T>) {
     const isAtEnd =
       el.scrollLeft + el.clientWidth >= el.scrollWidth - 5;
 
-    // 🔥 EDGE NUDGE
+    //  EDGE NUDGE
     if (direction === "left" && isAtStart) {
       setNudge("left");
       setTimeout(() => setNudge(null), 150);
@@ -82,8 +82,9 @@ function CardSlider<T>({ items, renderItem }: Props<T>) {
           className="
             w-10 h-10
             flex items-center justify-center
-            bg-white/10 rounded-xl
-            text-white/70
+            bg-card-strong rounded-xl
+            border border-border
+            text-text
             active:scale-90
             transition
           "
@@ -96,8 +97,9 @@ function CardSlider<T>({ items, renderItem }: Props<T>) {
           className="
             w-10 h-10
             flex items-center justify-center
-            bg-white/10 rounded-xl
-            text-white/70
+            bg-card-strong rounded-xl
+            border border-border
+            text-text
             active:scale-90
             transition
           "

@@ -23,7 +23,7 @@ function CoreSkills({ skills }: Props) {
         Core Skills
       </h2>
 
-      <p className="text-white/60 text-sm pl-3 max-w-md">
+      <p className="text-text-muted text-sm pl-3 max-w-md">
         I distribute 100 points across my skills based on experience and confidence from real projects.
       </p>
 
@@ -35,8 +35,8 @@ function CoreSkills({ skills }: Props) {
             <div
               key={skill.name}
               className="
-                bg-gradient-to-br from-white/10 to-white/5
-                border border-white/20
+                bg-card-strong
+                border border-border
                 backdrop-blur-md
                 rounded-xl p-4
                 space-y-3
@@ -46,7 +46,7 @@ function CoreSkills({ skills }: Props) {
             >
               {/* HEADER */}
               <div className="flex justify-between items-center">
-                <span className="text-white font-medium">
+                <span className="text-text font-medium">
                   {skill.name}
                 </span>
 
@@ -54,7 +54,7 @@ function CoreSkills({ skills }: Props) {
                   <div className="text-blue-400 text-sm font-semibold">
                     {percent}%
                   </div>
-                  <div className="text-white/40 text-[10px]">
+                  <div className="text-text-muted text-[10px]">
                     {skill.level} pts · {getLevelLabel(skill.level)}
                   </div>
                 </div>

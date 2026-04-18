@@ -23,7 +23,7 @@ function Exams() {
         <p
           className="
                     mt-4 max-w-2xl mx-auto
-                    text-white/70 text-sm md:text-base
+                    text-text text-sm md:text-base
                 "
         >
           A collection of projects and exams completed during my studies,

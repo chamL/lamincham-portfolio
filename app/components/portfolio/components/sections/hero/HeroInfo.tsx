@@ -20,7 +20,7 @@ function HeroInfo({
                     bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-transparent
                     backdrop-blur-2xl
 
-                    border border-white/10
+                    border border-border
                     rounded-2xl
 
                     shadow-insetStrong
@@ -36,6 +36,10 @@ function HeroInfo({
           activeCard={activeCard}
           setActiveCard={setActiveCard}
         />
+      </div>
+      <div className="text-text p-6 text-center text-xs md:text-sm space-y-1">
+        <p>Open to work · Available for internships & junior roles</p>
+        <p>Based in Oslo, Norway</p>
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ function ProfileDropDown() {
                         onClick={() => setOpen(false)}
                         className="
         fixed inset-0
-        bg-black/20 backdrop-blur-[2px]
+        backdrop-blur-[2px]
         z-20
         transition-opacity duration-300
     "
