@@ -12,26 +12,16 @@ function ProfileCard({ open }: Props) {
   return (
     <div
       className={`
-        relative w-[20rem]
-
-        backdrop-blur-2xl
+        relative w-[20rem] 
         bg-bg
 
         border border-glass-border
         rounded-br-xl border-t-0 border-l-0
-        shadow-
 
         p-5 text-center    
 
         transition-all duration-300
 
-        before:absolute before:inset-0
-        before:rounded-br-xl
-        before:bg-gradient-to-br
-        before:from-white/30 before:to-transparent
-        dark:before:from-white/10
-        before:opacity-40
-        before:pointer-events-none
 
         ${open
           ? "translate-y-0 opacity-100"

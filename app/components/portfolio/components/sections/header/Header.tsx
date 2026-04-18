@@ -13,13 +13,12 @@ function Header({ title }: HeaderProps) {
     return (
         <header
             className="
-                fixed top-0 left-0 right-0 z-50
-                w-full h-20 
+      fixed top-0 left-0 right-0 z-[200]
+    w-full h-20 
 
-                backdrop-blur-2xl
-                border-b border-border 
-
-                shadow-strong
+    backdrop-blur-2xl
+    border-b border-border 
+shadow-strong
             "
         >
             <div

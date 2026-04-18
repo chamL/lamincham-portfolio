@@ -11,29 +11,40 @@ function ProfileDropDown() {
 
     return (
         <>
-            {open &&
-                createPortal(
-                    <div
-                        onClick={() => setOpen(false)}
-                        className="
-        fixed inset-0
-        backdrop-blur-[2px]
-        z-20
-        transition-opacity duration-300
-    "
-                    />,
-                    document.body,
-                )}
+            {createPortal(
+                <>
+                    {/* OVERLAY */}
+                    {open && (
+                        <div
+                            onClick={() => setOpen(false)}
+                            className="
+                fixed inset-0
+                z-[100]
+              "
+                        />
+                    )}
 
-            {/* DROPDOWN */}
-            <div className="absolute left-0 top-full pointer-events-none z-[100]">
-                <DropdownWrapper open={open}>
-                    <ProfileCard open={open} />
-                    <ProfileButton open={open} onClick={() => setOpen(!open)}>
-                        Card
-                    </ProfileButton>
-                </DropdownWrapper>
-            </div>
+                    {/* DROPDOWN (UNDER HEADER) */}
+                    <div
+                        className="
+              fixed left-0 top-[5rem]   /* 80px = header height */
+              z-[150]
+              pointer-events-none
+            "
+                    >
+                        <DropdownWrapper open={open}>
+                            <ProfileCard open={open} />
+                            <ProfileButton
+                                open={open}
+                                onClick={() => setOpen(!open)}
+                            >
+                                Card
+                            </ProfileButton>
+                        </DropdownWrapper>
+                    </div>
+                </>,
+                document.body
+            )}
         </>
     );
 }

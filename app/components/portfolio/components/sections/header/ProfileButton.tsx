@@ -14,11 +14,11 @@ function ProfileButton({ open, onClick, children }: Props) {
                 px-6 py-3 ml-4 
 
                 bg-bg
-                backdrop-blur-xl
                 text-text
 
                 rounded-b-xl
-                border border-border border-t-0 
+                border border-border border-t-0 -translate-y-[1px]
+
 
                 shadow-xl
 
