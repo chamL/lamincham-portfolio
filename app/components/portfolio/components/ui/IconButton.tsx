@@ -35,7 +35,7 @@ export function IconButton({ icon, href, color = "", download, label }: Props) {
                     group-hover:opacity-100 group-hover:translate-y-0
 
                     transition-all duration-300
-                    pointer-events-none
+                    pointer-events-none z-50 
                 "
       >
         {label}

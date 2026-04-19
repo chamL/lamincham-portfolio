@@ -23,7 +23,7 @@ function ProfileDropDown() {
             {open && (
                 <div
                     onClick={() => setOpen(false)}
-                    className="fixed inset-0 z-[100]"
+                    className="fixed inset-0 "
                 />
             )}
 

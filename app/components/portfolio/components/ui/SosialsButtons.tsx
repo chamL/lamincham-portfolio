@@ -4,7 +4,7 @@ import { IconButton } from "./IconButton";
 
 function SosialsButtons() {
     return (
-        <div className="flex justify-center pointer-events-auto gap-4 mt-2">
+        <div className="flex justify-center z-50 pointer-events-auto gap-4 mt-2">
 
             <IconButton
                 icon={<FaGithub size={20} />}
@@ -18,6 +18,7 @@ function SosialsButtons() {
                 href="https://www.linkedin.com/in/lamin-cham-8986a132a/"
                 color="hover:text-blue-400"
                 label="LinkedIn"
+
             />
 
             <IconButton

@@ -12,8 +12,8 @@ function ProfileCard({ open }: Props) {
   return (
     <div
       className={`
-        relative w-[20rem] 
-        bg-bg
+        relative w-[20rem]   z-[140]
+        bg-bg 
 
         border border-glass-border
         rounded-br-xl border-t-0 border-l-0

@@ -19,14 +19,13 @@ function ProfileButton({ open, onClick, children }: Props) {
                 rounded-b-xl
                 border border-border border-t-0 -translate-y-[1px]
 
-
                 shadow-xl
 
                 hover:shadow-insetStrong
 
                 transition-all duration-300
 
-                relative z-20
+                relative   
                 pointer-events-auto
             "
         >
