@@ -18,8 +18,7 @@ function CardSlider<T>({ items, renderItem }: Props<T>) {
     const scrollAmount = el.offsetWidth * 0.8;
 
     const isAtStart = el.scrollLeft <= 0;
-    const isAtEnd =
-      el.scrollLeft + el.clientWidth >= el.scrollWidth - 5;
+    const isAtEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 5;
 
     //  EDGE NUDGE
     if (direction === "left" && isAtStart) {
@@ -42,7 +41,6 @@ function CardSlider<T>({ items, renderItem }: Props<T>) {
 
   return (
     <div className="max-w-6xl mx-auto">
-
       {/* SLIDER */}
       <div className="overflow-visible ">
         <div

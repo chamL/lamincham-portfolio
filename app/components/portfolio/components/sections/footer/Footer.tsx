@@ -38,7 +38,6 @@ function Footer() {
           <div className="flex justify-center">
             <SosialsButtons />
           </div>
-
         </div>
 
         {/* DIVIDER */}

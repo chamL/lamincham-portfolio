@@ -19,12 +19,11 @@ function CoreSkills({ skills }: Props) {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl pl-3 font-bold text-blue-400">
-        Core Skills
-      </h2>
+      <h2 className="text-2xl pl-3 font-bold text-blue-400">Core Skills</h2>
 
       <p className="text-text-muted text-sm pl-3 max-w-md">
-        I distribute 100 points across my skills based on experience and confidence from real projects.
+        I distribute 100 points across my skills based on experience and
+        confidence from real projects.
       </p>
 
       <div className="space-y-5">
@@ -46,9 +45,7 @@ function CoreSkills({ skills }: Props) {
             >
               {/* HEADER */}
               <div className="flex justify-between items-center">
-                <span className="text-text font-medium">
-                  {skill.name}
-                </span>
+                <span className="text-text font-medium">{skill.name}</span>
 
                 <div className="text-right">
                   <div className="text-blue-400 text-sm font-semibold">

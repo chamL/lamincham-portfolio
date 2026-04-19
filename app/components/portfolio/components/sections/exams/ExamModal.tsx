@@ -33,9 +33,7 @@ export default function ExamModal({
         </h2>
 
         {/* TEXT */}
-        <p className="text-white/80 text-sm leading-relaxed">
-          {fullBio}
-        </p>
+        <p className="text-white/80 text-sm leading-relaxed">{fullBio}</p>
 
         {/* VIDEO */}
         {video && (

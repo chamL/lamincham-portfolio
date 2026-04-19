@@ -3,15 +3,15 @@
 import { X } from "lucide-react";
 
 type Props = {
-    children: React.ReactNode;
-    onClose: () => void;
+  children: React.ReactNode;
+  onClose: () => void;
 };
 
 export default function BaseModal({ children, onClose }: Props) {
-    return (
-        <div
-            onClick={onClose}
-            className="
+  return (
+    <div
+      onClick={onClose}
+      className="
         fixed inset-0 z-50
         flex items-center justify-center
 
@@ -20,11 +20,11 @@ export default function BaseModal({ children, onClose }: Props) {
 
         animate-in fade-in duration-300
       "
-        >
-            {/* CLOSE BUTTON */}
-            <button
-                onClick={onClose}
-                className="
+    >
+      {/* CLOSE BUTTON */}
+      <button
+        onClick={onClose}
+        className="
           fixed top-6 right-6 z-[60]
 
           p-3 rounded-full
@@ -36,14 +36,14 @@ export default function BaseModal({ children, onClose }: Props) {
 
           transition-all duration-300
         "
-            >
-                <X className="text-white" size={20} />
-            </button>
+      >
+        <X className="text-white" size={20} />
+      </button>
 
-            {/* CONTENT WRAPPER */}
-            <div
-                onClick={(e) => e.stopPropagation()}
-                className="
+      {/* CONTENT WRAPPER */}
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="
           relative
           w-full max-w-2xl
           max-h-[85vh]
@@ -59,9 +59,9 @@ export default function BaseModal({ children, onClose }: Props) {
 
           animate-in zoom-in-95 fade-in duration-300
         "
-            >
-                {children}
-            </div>
-        </div>
-    );
+      >
+        {children}
+      </div>
+    </div>
+  );
 }

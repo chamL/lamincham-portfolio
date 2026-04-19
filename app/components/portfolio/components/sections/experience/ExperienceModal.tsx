@@ -28,9 +28,7 @@ export default function ExperienceModal({
       </div>
 
       {/* TEXT */}
-      <p className="text-white/80 text-sm leading-relaxed mb-6">
-        {fullBio}
-      </p>
+      <p className="text-white/80 text-sm leading-relaxed mb-6">{fullBio}</p>
 
       {/* IMAGES */}
       {images.length > 0 && (

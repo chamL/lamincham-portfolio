@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const config = {
-  content: [
-    "./app/**/*.{js,jsx,ts,tsx}",
-    "./components/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       darkMode: "class",
@@ -94,7 +91,6 @@ const config = {
           radial-gradient(circle at 75% 75%, rgba(251,207,232,0.15), transparent 60%)
         `,
       },
-
     },
   },
   plugins: [],

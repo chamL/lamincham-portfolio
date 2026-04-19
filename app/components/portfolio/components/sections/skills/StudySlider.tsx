@@ -45,7 +45,9 @@ function StudySlider() {
             
               bg-card dark:bg-card-muted
             
-              ${position === "center" && `
+              ${
+                position === "center" &&
+                `
                 scale-110 z-20 opacity-100
             
                 bg-card
@@ -59,23 +61,30 @@ function StudySlider() {
                 before:from-blue-500/10 before:to-purple-500/10
                 dark:before:from-blue-500/20 dark:before:to-purple-500/20
                 before:pointer-events-none
-              `}
+              `
+              }
             
-              ${position === "left" && `
+              ${
+                position === "left" &&
+                `
                 -translate-x-[120%]
                 scale-90 z-10 opacity-60
             
                 bg-card-muted
                 shadow-soft
-              `}
+              `
+              }
             
-              ${position === "right" && `
+              ${
+                position === "right" &&
+                `
                 translate-x-[120%]
                 scale-90 z-10 opacity-60
             
                 bg-card-muted
                 shadow-soft
-              `}
+              `
+              }
             
               ${position === "hidden" && "opacity-0 scale-75"}
             `}
@@ -162,9 +171,11 @@ function StudySlider() {
             className={`
             w-2 h-2 rounded-full transition
   
-            ${i === index
+            ${
+              i === index
                 ? "bg-blue-500 dark:bg-blue-300 scale-125"
-                : "bg-black/20 dark:bg-black/40"}
+                : "bg-black/20 dark:bg-black/40"
+            }
           `}
           />
         ))}

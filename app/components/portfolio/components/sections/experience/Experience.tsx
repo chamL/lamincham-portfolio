@@ -9,7 +9,11 @@ import { Key } from "react";
 function Experience() {
   return (
     <SectionWrapper id="experience">
-      <Banner text="Working experience" bg="bg-cyan-800" textColor="text-white" />
+      <Banner
+        text="Working experience"
+        bg="bg-cyan-800"
+        textColor="text-white"
+      />
 
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {experiences.map(

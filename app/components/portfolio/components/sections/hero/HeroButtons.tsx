@@ -12,10 +12,11 @@ function HeroButtons({ buttons, activeCard, setActiveCard }: HeroButtonsProps) {
           <button
             key={btn.id}
             onClick={() => setActiveCard(btn.id)}
-            className={`p-2 rounded-md transition ${activeCard === btn.id
+            className={`p-2 rounded-md transition ${
+              activeCard === btn.id
                 ? "bg-white text-black scale-110"
                 : "bg-black/20 text-white hover:bg-black/40"
-              }`}
+            }`}
           >
             <Icon size={18} />
           </button>

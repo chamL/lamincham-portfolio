@@ -7,38 +7,35 @@ import ProfileCard from "./ProfileCard";
 import ProfileButton from "./ProfileButton";
 
 function ProfileDropDown() {
-    const [open, setOpen] = useState(false);
-    const [mounted, setMounted] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
-    // sørger for at vi er på client
-    useEffect(() => {
-        setMounted(true);
-    }, []);
+  // sørger for at vi er på client
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-    if (!mounted) return null;
+  if (!mounted) return null;
 
-    return createPortal(
-        <>
-            {/* OVERLAY */}
-            {open && (
-                <div
-                    onClick={() => setOpen(false)}
-                    className="fixed inset-0 "
-                />
-            )}
+  return createPortal(
+    <>
+      {/* OVERLAY */}
+      {open && (
+        <div onClick={() => setOpen(false)} className="fixed inset-0 " />
+      )}
 
-            {/* DROPDOWN */}
-            <div className="fixed left-0 top-[5rem] z-[150] pointer-events-none">
-                <DropdownWrapper open={open}>
-                    <ProfileCard open={open} />
-                    <ProfileButton open={open} onClick={() => setOpen(!open)}>
-                        Card
-                    </ProfileButton>
-                </DropdownWrapper>
-            </div>
-        </>,
-        document.body
-    );
+      {/* DROPDOWN */}
+      <div className="fixed left-0 top-[5rem] z-[150] pointer-events-none">
+        <DropdownWrapper open={open}>
+          <ProfileCard open={open} />
+          <ProfileButton open={open} onClick={() => setOpen(!open)}>
+            Card
+          </ProfileButton>
+        </DropdownWrapper>
+      </div>
+    </>,
+    document.body,
+  );
 }
 
 export default ProfileDropDown;

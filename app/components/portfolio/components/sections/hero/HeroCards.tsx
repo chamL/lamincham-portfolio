@@ -24,10 +24,11 @@ function HeroCards({ cards, activeCard }: HeroCardsProps) {
                         absolute inset-0
                         transition-all duration-500 ease-in-out
 
-                        ${activeCard === card.id
-              ? "opacity-100 translate-x-0 scale-100 z-10"
-              : "opacity-0 translate-x-8 scale-95 z-0 pointer-events-none"
-            }
+                        ${
+                          activeCard === card.id
+                            ? "opacity-100 translate-x-0 scale-100 z-10"
+                            : "opacity-0 translate-x-8 scale-95 z-0 pointer-events-none"
+                        }
                     `}
         >
           <div

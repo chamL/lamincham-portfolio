@@ -23,22 +23,21 @@ function ProfileCard({ open }: Props) {
         transition-all duration-300
 
 
-        ${open
-          ? "translate-y-0 opacity-100"
-          : "-translate-y-[90%] opacity-0"
-        }
+        ${open ? "translate-y-0 opacity-100" : "-translate-y-[90%] opacity-0"}
       `}
     >
       {/* CONTENT */}
       <div className="relative space-y-4">
         {/* NAME */}
-        <h3 className="
+        <h3
+          className="
   font-bold text-xl
   bg-gradient-to-r from-blue-400 to-purple-400
   bg-clip-text text-transparent font-permanent_marker
 
 
-">
+"
+        >
           Lamin Cham
         </h3>
 
@@ -62,9 +61,11 @@ function ProfileCard({ open }: Props) {
         </div>
 
         {/* TEXT */}
-        <p className="
+        <p
+          className="
   text-text text-sm leading-relaxed 
-">
+"
+        >
           Use the buttons below to find my LinkedIn, GitHub, and other
           platforms. You can also access my email, phone number, and download my
           CV.
