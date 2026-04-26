@@ -17,6 +17,7 @@ function StudySlider() {
 
   return (
     <div className="mt-20 flex flex-col items-center w-full">
+      {/* SLIDER */}
       <div className="relative w-full max-w-5xl h-[18.75rem] flex items-center justify-center overflow-hidden">
         {study.map((item, i) => {
           const position =
@@ -34,83 +35,104 @@ function StudySlider() {
               className={`
               absolute transition-all duration-500 ease-in-out
             
-              w-[17.5rem] md:w-[20rem]
-              h-[11.25rem]
+              w-[15rem] md:w-[20rem]
+              h-[13.5rem]
             
               flex flex-col justify-start
               p-6 rounded-2xl text-center
             
-              backdrop-blur-xl
-              border border-border
+              backdrop-blur-md
+              border
             
-              bg-card dark:bg-card-muted
-            
-              ${
-                position === "center" &&
+              ${position === "center" &&
                 `
                 scale-110 z-20 opacity-100
-            
-                bg-card
-                dark:bg-card-strong
-            
-                shadow-hover
-            
+
+                /* LIGHT (strong beige) */
+                bg-[linear-gradient(135deg,#ffffff,rgba(230,210,180,0.75))]
+                
+                /* DARK (lilla beholdes) */
+                dark:bg-[linear-gradient(135deg,rgba(139,92,246,0.35),rgba(99,102,241,0.2))]
+
+                border-black/10 dark:border-white/10
+
+                shadow-[0_10px_30px_rgba(0,0,0,0.08)]
+                backdrop-blur-xl
+
                 before:absolute before:inset-0
                 before:rounded-2xl
-                before:bg-gradient-to-br
-                before:from-blue-500/10 before:to-purple-500/10
-                dark:before:from-blue-500/20 dark:before:to-purple-500/20
+
+                /* beige glow */
+                before:bg-[radial-gradient(circle_at_25%_20%,rgba(180,140,90,0.18),transparent_70%)]
+
+                /* lilla glow */
+                dark:before:bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.25),transparent_60%)]
+
                 before:pointer-events-none
               `
-              }
+                }
             
-              ${
-                position === "left" &&
+              ${position === "left" &&
                 `
-                -translate-x-[120%]
-                scale-90 z-10 opacity-60
+                -translate-x-[105%]
+                scale-95 z-10 opacity-95
             
-                bg-card-muted
-                shadow-soft
+                bg-white/90
+                dark:bg-card-muted
+
+                border-black/10 dark:border-white/10
+
+                shadow-[0_6px_20px_rgba(0,0,0,0.06)]
               `
-              }
+                }
             
-              ${
-                position === "right" &&
+              ${position === "right" &&
                 `
-                translate-x-[120%]
-                scale-90 z-10 opacity-60
+                translate-x-[105%]
+                scale-95 z-10 opacity-95
             
-                bg-card-muted
-                shadow-soft
+                bg-white/90
+                dark:bg-card-muted
+
+                border-black/10 dark:border-white/10
+
+                shadow-[0_6px_20px_rgba(0,0,0,0.06)]
               `
-              }
+                }
             
               ${position === "hidden" && "opacity-0 scale-75"}
             `}
             >
+              {/* TITLE */}
               <h3 className="text-text font-semibold mb-2 text-sm">
                 {item.semester}
               </h3>
-              <hr className="py-2 border-t border-border" />
 
+              <hr className="py-2 border-t border-black/10 dark:border-border" />
+
+              {/* SUBJECT TAGS */}
               <div className="flex flex-wrap justify-center gap-2 text-xs">
                 {item.subjects.map((sub, idx) => (
                   <span
                     key={idx}
                     className="
-                    px-3 py-1 text-xs font-medium
-                  
-                    rounded-full
-                  
-                    bg-white/90 dark:bg-white/10
-                    backdrop-blur-md
-                  
+                    px-3 py-1 text-xs font-medium rounded-full
+
+                    bg-white
+                    dark:bg-white/10
+
                     border border-black/10 dark:border-white/10
-                  
-                    text-gray-800 text-text
-                  
-                    shadow-sm
+
+                    text-text
+
+                    shadow-[0_2px_4px_rgba(0,0,0,0.06)]
+
+                    transition
+                    hover:bg-[#f5f2eb]
+                    hover:border-black/20
+
+                    dark:hover:bg-white/20
+                    dark:hover:border-white/20
                   "
                   >
                     {sub}
@@ -120,23 +142,22 @@ function StudySlider() {
             </div>
           );
         })}
+      </div>
 
-        {/* BUTTONS */}
+      {/* BUTTONS UNDER (MOBILE FRIENDLY) */}
+      <div className="flex w-full justify-between items-center gap-4 mt-6">
         <button
           onClick={prev}
           className="
-          absolute left-4
-  
-          bg-card-strong
-          backdrop-blur-md
-  
-          p-2 rounded-full
-          border border-border
-  
+          bg-white dark:bg-card
+
+          p-3 rounded-full
+          border border-black/10 dark:border-border
+
+          shadow-sm
           hover:scale-110
+
           transition
-  
-          z-30
         "
         >
           <ChevronLeft className="text-text" />
@@ -145,18 +166,15 @@ function StudySlider() {
         <button
           onClick={next}
           className="
-          absolute right-4
-  
-          bg-card-strong
-          backdrop-blur-md
-  
-          p-2 rounded-full
-          border border-border
-  
+          bg-white dark:bg-card
+
+          p-3 rounded-full
+          border border-black/10 dark:border-border
+
+          shadow-sm
           hover:scale-110
+
           transition
-  
-          z-30
         "
         >
           <ChevronRight className="text-text" />
@@ -170,12 +188,11 @@ function StudySlider() {
             key={i}
             className={`
             w-2 h-2 rounded-full transition
-  
-            ${
-              i === index
-                ? "bg-blue-500 dark:bg-blue-300 scale-125"
-                : "bg-black/20 dark:bg-black/40"
-            }
+            
+            ${i === index
+                ? "bg-[#a16207] dark:bg-purple-400 scale-125"
+                : "bg-black/20 dark:bg-white/20"
+              }
           `}
           />
         ))}

@@ -7,6 +7,7 @@ const sora = Sora({
   subsets: ["latin"],
   weight: "600",
 });
+
 const permanent = Permanent_Marker({
   variable: "--font-permanent",
   subsets: ["latin"],
@@ -48,15 +49,29 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html
       lang="en"
-      className={` dark ${sora.variable} ${permanent.variable} h-full antialiased`}
+      suppressHydrationWarning
+      className={`${sora.variable} ${permanent.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              const theme = localStorage.getItem('theme') || 'dark';
+              document.documentElement.classList.add(theme);
+            `,
+          }}
+        />
+      </head>
+
+      <body className="min-h-full flex flex-col font-sans bg-bg text-text">
+        {children}
+      </body>
     </html>
   );
 }

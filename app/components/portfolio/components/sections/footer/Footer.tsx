@@ -7,7 +7,7 @@ function Footer() {
   return (
     <SectionWrapper
       id="footer"
-      className="bg-glass-blue-strong border-glass-border shadow-glass backdrop-blur-lg text-white mt-20"
+      className="bg-glass-bg border-glass-border shadow-glass backdrop-blur-lg text-white mt-20"
     >
       <footer>
         {/* CONTENT */}

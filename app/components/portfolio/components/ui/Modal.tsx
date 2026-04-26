@@ -12,7 +12,7 @@ export default function BaseModal({ children, onClose }: Props) {
     <div
       onClick={onClose}
       className="
-        fixed inset-0 z-50
+        fixed inset-0 z-[200]
         flex items-center justify-center
 
         bg-black/50 backdrop-blur-md
@@ -47,6 +47,7 @@ export default function BaseModal({ children, onClose }: Props) {
           relative
           w-full max-w-2xl
           max-h-[85vh]
+          
 
           bg-black/40 backdrop-blur-2xl
           border border-white/10

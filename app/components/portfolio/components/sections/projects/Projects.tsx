@@ -96,7 +96,7 @@ function Projects() {
           </div>
         ))}
       </div>
-      <p className="text-center text-white/60 text-sm mt-12">
+      <p className="text-center text-text text-sm mt-12">
         * Projects coming soon — currently updating older work to modern
         standards.
       </p>
