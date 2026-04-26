@@ -7,6 +7,7 @@ import retail from "@/public/images/projects/boutique.png";
 import clothing from "@/public/images/projects/laundry.png";
 import Banner from "../../ui/Banner";
 import SectionWrapper from "../../ui/SectionWrapper";
+import Link from "next/link";
 
 type Project = {
   title: string;
@@ -14,6 +15,7 @@ type Project = {
   description: string;
   bg: string;
   text: string;
+  href?: string;
 };
 
 const projects: Project[] = [
@@ -37,6 +39,7 @@ const projects: Project[] = [
     description: "Clothing store concept with modern layout.",
     bg: "bg-purple-200",
     text: "text-gray-800",
+    href: "/clothes",
   },
 ];
 
@@ -53,22 +56,36 @@ function Projects() {
       {/* GRID */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
-          <div
+          <Link
+
             key={project.title}
+
+            href={project.href || "#"}
+
             className={`
-                            rounded-xl p-6
-                            flex flex-col items-center text-center
 
-                            ${project.bg}
-                            ${project.text}
+  rounded-xl p-6
 
-                            shadow-lg
-                            hover:shadow-xl
-                            hover:-translate-y-1
-                            hover:scale-[1.02]
+  flex flex-col items-center text-center
 
-                            transition-all duration-300
-                        `}
+  ${project.bg}
+
+  ${project.text}
+
+  shadow-lg
+
+  hover:shadow-xl
+
+  hover:-translate-y-1
+
+  hover:scale-[1.02]
+
+  transition-all duration-300
+
+  cursor-pointer
+
+`}
+
           >
             <h3 className="text-lg font-bold mb-2">{project.title}</h3>
 
@@ -93,7 +110,7 @@ function Projects() {
             >
               🚧 In Progress
             </span>
-          </div>
+          </Link>
         ))}
       </div>
       <p className="text-center text-text text-sm mt-12">
