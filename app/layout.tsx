@@ -62,9 +62,11 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              const theme = localStorage.getItem('theme') || 'dark';
-              document.documentElement.classList.add(theme);
-            `,
+      try {
+        const theme = localStorage.getItem("theme") || "dark";
+        document.documentElement.classList.add(theme);
+      } catch (e) {}
+    `,
           }}
         />
       </head>
