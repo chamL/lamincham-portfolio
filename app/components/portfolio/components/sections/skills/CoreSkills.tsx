@@ -34,10 +34,7 @@ function CoreSkills({ skills }: Props) {
             <div
               key={skill.name}
               className="
-                bg-card-strong
-                border border-border
-                backdrop-blur-md
-                rounded-xl p-4
+                p-4
                 space-y-3
                 hover:scale-[1.02]
                 transition-all duration-300
