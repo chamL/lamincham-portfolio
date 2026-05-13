@@ -44,6 +44,9 @@ export default function ProductDetailPage() {
                     <p className="text-xl text-text-muted">
                         ${product.price}
                     </p>
+                    <p className="text-xl text-text-muted">
+                        ${product.description}
+                    </p>
 
                     <p className="text-sm text-text-muted max-w-md">
                         Minimal premium clothing designed for everyday wear.
